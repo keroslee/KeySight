@@ -1,0 +1,18 @@
+# 编译输出
+x64/
+x86/
+Debug/
+Release/
+*.exe
+*.dll
+*.lib
+
+# Visual Studio 文件
+.vs/
+*.user
+*.aps
+
+# 其他
+*.obj
+*.pdb
+*.ilk

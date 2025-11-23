@@ -1,0 +1,12 @@
+# 文本文件使用 LF 行结束符
+*.cpp text
+*.h text
+
+# 二进制文件不进行转换
+*.lib binary
+*.dll binary
+
+# Visual Studio 特定文件
+*.sln text eol=crlf
+*.vcxproj text eol=crlf
+*.vcxproj.filters text eol=crlf
