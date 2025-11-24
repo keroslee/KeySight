@@ -100,6 +100,26 @@ ENUM_LAN(X) ENUM_CONF(X) ENUM_CMD(X)
 		{lan_view_failed, L"打开网页失败"},
 		{lan_view_success, L"打开网页成功"}
 	};
+	unordered_map<MyEnum, wstring> g_langEnMap = {
+		{lan_app, L"Key Statistics" },
+		{ lan_enable, L"Enable" },
+		{ lan_disable, L"Disable" },
+		{ lan_onboot, L"Start on Boot" },
+		{ lan_stat, L"Enable Statistics" },
+		{ lan_show, L"Show Keys" },
+		{ lan_hotkey, L"Set Hotkey" },
+		{ lan_exit, L"Exit" },
+		{ lan_total, L"Total Keystrokes: " },
+		{ lan_hotkey_tip, L"Press hotkey to set / Del to remove" },
+		{ lan_hotkey_title, L"Set Hotkey" },
+		{ lan_suc, L"Success" },
+		{ lan_fai, L"Failed" },
+		{ lan_dup, L"Application is already running, check system tray" },
+		{ lan_view, L"View Statistics" },
+		{ lan_viewing, L"Opening webpage to view key heatmap" },
+		{ lan_view_failed, L"Failed to open webpage" },
+		{ lan_view_success, L"Webpage opened successfully"}
+	};
 	static map<wstring, wstring> lanMap = {
 		{ L"lan_app",  g_langMap[lan_app] },
 	};
@@ -309,6 +329,7 @@ ENUM_LAN(X) ENUM_CONF(X) ENUM_CMD(X)
 	void LoadConfig(ConfigItem<bool>& item) {
 		item.value = GetPrivateProfileInt(SECTION_CONFIG, item.key, item.value, configfile.c_str());
 	}
+
 	void LoadConfig() {
 #define GET_INT(name) g_config.name.value = GetPrivateProfileInt(SECTION_CONFIG, g_config.name.key, g_config.name.value, configfile.c_str())
 		GET_INT(boot);
@@ -325,6 +346,8 @@ ENUM_LAN(X) ENUM_CONF(X) ENUM_CMD(X)
 		else {
 			LOG(L"unknown");
 		}
+		if (PRIMARYLANGID(langId)!=LANG_CHINESE && PRIMARYLANGID(langId)!=LANG_CHINESE_TRADITIONAL)
+			g_langMap = g_langEnMap;
 		GetPrivateProfileString(SECTION_CONFIG, g_config.view_url.key, default_url, g_config.view_url.value, ARRAYSIZE(default_url), configfile.c_str());
 		GetPrivateProfileString(SECTION_CONFIG, g_config.lang.key, localeName, g_config.lang.value, ARRAYSIZE(localeName), configfile.c_str());
 	}
@@ -351,9 +374,15 @@ ENUM_LAN(X) ENUM_CONF(X) ENUM_CMD(X)
 		DWORD attr = GetFileAttributesW(iniPath.c_str());
 		if (attr == INVALID_FILE_ATTRIBUTES || (attr & FILE_ATTRIBUTE_DIRECTORY)) {
 			SaveConfig();
-			for (const auto& lan : g_langMap)
+			LANGID langId = GetUserDefaultUILanguage();
+			if (PRIMARYLANGID(langId) == LANG_CHINESE || PRIMARYLANGID(langId) == LANG_CHINESE_TRADITIONAL)
+				for (const auto& lan : g_langMap)
+				{
+					WritePrivateProfileString(localeName, enum2str[lan.first], lan.second.c_str(), configfile.c_str());
+				}
+			for (const auto& lan : g_langEnMap)
 			{
-				WritePrivateProfileString(g_config.lang.value, enum2str[lan.first], lan.second.c_str(), configfile.c_str());
+				WritePrivateProfileString(L"en-US", enum2str[lan.first], lan.second.c_str(), configfile.c_str());
 			}
 		}
 	}
