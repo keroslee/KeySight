@@ -11,7 +11,8 @@ KeySight 是一个轻量级的 Windows 桌面应用程序，用于记录和分�
 
 - **📊 实时统计**: 自动统计键盘和鼠标按键的使用频率
 - **🎨 热力图可视化**: 基于 HTML 的交互式热力图，直观显示按键频率
-- **🔔 实时显示**: 按键时显示悬浮提示，支持 Windows 徽标等特殊键，<mark style="background: #ff0; color: #dc3545; border: 4px solid #dc3545; padding: 2px 6px; border-radius: 15px;">⚠️ 注意密码安全</mark>
+- **🔔 实时显示**: 按键时显示悬浮提示，支持 Windows 徽标等特殊键。
+  ![warning](https://img.shields.io/badge/⚠️_注意密码安全-red?style=for-the-badge)
 - **⚙️ 高度可配置**: 支持开机启动(需要管理员权限)、快捷键控制、统计开关等功能
 - **🔒 隐私保护**: 所有数据本地存储(仅按键次数)，不上传任何个人信息
 - **🌐 跨平台查看**: 支持本地和在线查看统计结果
