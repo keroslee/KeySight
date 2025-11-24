@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="40">
+  <!-- 背景矩形 -->
+  <rect x="0" y="0" width="300" height="40" rx="15" ry="15" fill="#ff0" stroke="#dc3545" stroke-width="4"/>
+  
+  <!-- 文字 -->
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#dc3545">
+    ⚠️ 注意密码安全
+  </text>
+</svg>

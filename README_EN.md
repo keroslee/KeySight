@@ -11,8 +11,7 @@ KeySight is a lightweight Windows desktop application for recording and analyzin
 
 - **📊 Real-time Statistics**: Automatically tracks and counts keyboard and mouse key presses.
 - **🎨 Heatmap Visualization**: Interactive HTML-based heatmap that intuitively displays key press frequency.
-- **🔔 Real-time Display**: Shows floating hints when keys are pressed, supports special keys like the Windows logo key.
-  ![warning](https://img.shields.io/badge/⚠️_Be%20mindful%20of%20password%20security-red?style=for-the-badge)
+- **🔔 Real-time Display**: Shows floating hints when keys are pressed, supports special keys like the Windows logo key.<img src="warning_en.svg" width="400" />
 - **⚙️ Highly Configurable**: Supports startup with boot (requires Administrator privileges), hotkey controls, statistics toggle, and more.
 - **🔒 Privacy Protection**: All data is stored locally (only key press counts), no personal information is uploaded.
 - **🌐 Cross-platform Viewing**: Supports viewing statistics locally or online.
