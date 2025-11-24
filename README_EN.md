@@ -176,7 +176,7 @@ A: Add the program to your antivirus software's whitelist.
 The program runtime log is saved in KeySight.log. Check this file if you encounter problems.
 
 ## 📄 License
-This project is licensed under the **GNU General Public License v3.0** - see the ![LICENSE](LICENSE) file or the [GNU website](https://www.gnu.org/licenses/gpl-3.0.html) for details.
+This project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](LICENSE) file or the [GNU website](https://www.gnu.org/licenses/gpl-3.0.html) for details.
 
 ## 🙏 Acknowledgments
 - Thanks to [LC044/TraceBoard](https://github.com/LC044/TraceBoard/blob/main/server/static/index.html)
