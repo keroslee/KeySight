@@ -162,10 +162,13 @@ KeySight obtains Listary5's hotkey settings by parsing its configuration file (P
 
 **Q: The program fails to start or exits immediately.**
 A: Check if another instance is already running. The program supports only a single instance.
+
 **Q: Unable to start on boot.**
 A: Enabling this feature requires Administrator privileges because it needs to create a KeySight task in the Windows Task Scheduler. Also, check the program file path for spaces or special characters.
+
 **Q: The heatmap page fails to open.**
 A: Check your default browser settings and internet connection. Alternatively, try pressing a few keys/mouse buttons and retry. On first use, the KeySight.txt file might not be generated yet (it starts writing only after recording more than 10 key presses).
+
 **Q: False positive by antivirus software.**
 A: Add the program to your antivirus software's whitelist.
 
