@@ -176,7 +176,7 @@ A: 将程序添加到杀毒软件的白名单中
 程序运行日志保存在 `KeySight.log` 中，遇到问题时可以查看此文件。
 
 ## 📄 许可证
-本项目采用 **GNU General Public License v3.0** - 详见 [LICENSE](https://www.gnu.org/licenses/gpl-3.0.html) 。
+本项目采用 **GNU General Public License v3.0** - 详见 ![LICENSE](LICENSE) 或 [GNU 官网](https://www.gnu.org/licenses/gpl-3.0.html)。
 
 ## 🙏 致谢
 - 感谢 [LC044/TraceBoard](https://github.com/LC044/TraceBoard/blob/main/server/static/index.html)
